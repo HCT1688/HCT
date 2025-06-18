@@ -1,0 +1,1 @@
+document.write('<img src="https://toolkit.url.com.tw/counter/style/style002/3.png" /><img src="https://toolkit.url.com.tw/counter/style/style002/1.png" /><img src="https://toolkit.url.com.tw/counter/style/style002/6.png" /><img src="https://toolkit.url.com.tw/counter/style/style002/7.png" /><img src="https://toolkit.url.com.tw/counter/style/style002/9.png" />');
