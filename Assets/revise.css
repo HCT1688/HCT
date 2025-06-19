@@ -21,3 +21,33 @@ select.cf{max-width:180px;}
     display: inline-block;
     white-space: nowrap;
 } 
+/* —— 1. 讓 header 透明，並做為 relative 容器 —— */
+#idx_header {
+  background-color: transparent !important;
+  position: relative !important;
+}
+
+/* —— 2. 把 Hero 圖絕對定位到 header 最頂 —— */
+#idx_header .hero {
+  position: absolute !important;
+  top: 0; left: 0;
+  width: 100%; 
+  height: 100%;   /* 如需更精確，可用固定高度 px 或 vh */
+  overflow: hidden;
+  z-index: 0;     /* 放在最底層 */
+}
+
+/* —— 3. 讓圖片鋪滿 .hero —— */
+#idx_header .hero-bg {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* —— 4. Logo 與選單浮在 banner 之上 —— */
+#idx_header #idx_logo,
+#idx_header #idx_menu,
+#idx_header #idx_logo * {
+  position: relative !important;
+  z-index: 1 !important;
+}
