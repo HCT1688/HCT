@@ -21,3 +21,7 @@ select.cf{max-width:180px;}
     display: inline-block;
     white-space: nowrap;
 } 
+/* 讓 Header 背景透明，蓋掉原模板的藍色 */
+#idx_header{
+  background-color:transparent !important;
+}
