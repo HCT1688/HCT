@@ -113,4 +113,13 @@ body::after {
   z-index: 1;
 }
 
+#container, #Tbody, #foot {
+  width: calc(100vw - 300px) !important;   /* 滿版再扣掉兩側金屬框 150*2 */
+  max-width: unset !important;             /* 取消 max-width 限制 */
+  margin: 0 auto !important;               /* 置中（視覺對齊） */
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box;
+  background: transparent;
+}
 
