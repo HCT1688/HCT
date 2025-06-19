@@ -114,14 +114,14 @@ body::after {
 }
 
 #container, #Tbody, #foot {
-  width: 1200px;             /* 你要的內容寬度，例如 1200px */
-  max-width: 90vw;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 150px;
+  padding-right: 150px;
   box-sizing: border-box;
-  background: #e7f0fa;       /* 藍底色，可換成你要的色碼 */
-  border-radius: 16px;       /* 圓角可加可不加，看設計 */
-  box-shadow: 0 4px 32px rgba(0,0,0,0.06);  /* 陰影可加可不加 */
+  background: #e7f0fa;  /* 你的內容藍底 */
+  border-radius: 16px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.06);
 }
 
