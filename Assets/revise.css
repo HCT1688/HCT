@@ -24,10 +24,3 @@ select.cf{max-width:180px;}
 /* 讓 Header 背景透明，蓋掉原模板的藍色 */
 #idx_header{
   background-color:transparent !important;
-}
-#container, .wrapper{
-  width:100% !important;
-  max-width:none !important;
-  margin:0 !important;
-  padding:0 !important;
-}
