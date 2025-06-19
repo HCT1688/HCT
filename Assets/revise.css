@@ -51,19 +51,25 @@ select.cf{max-width:180px;}
   position: relative !important;
   z-index: 1 !important;
 }
-/* ===== 让 idx_intro.box 显示为卡片框 ===== */
-.idx_intro.box {
-  background-color: rgba(255,255,255,0.9); /* 半透明白底 */
-  border: 1px solid #ccc;                  /* 淡灰边框 */
-  border-radius: 8px;                      /* 圆角 */
-  padding: 16px;                           /* 内距 */
-  margin: 0 8px 24px;                      /* 左右留空 + 底部间距 */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);    /* 轻微阴影 */
-}
-
-/* 标题与内容上下间距及对齐 */
-.idx_intro.box .Ptitle {
-  margin-top: 0;
-  margin-bottom: 12px;
+/* —— 金屬質感橫條標題 —— */
+.idx_intro .Ptitle {
+  display: block;                      /* 佔滿整行 */
+  width: calc(100% - 32px);           /* 內縮左右 16px */
+  margin: 0 auto 16px;                /* 上0 下16px 置中 */
+  padding: 8px 16px;                  /* 內距上下8px、左右16px */
+  background: linear-gradient(
+    to right,
+    #d1d1d1 0%,
+    #f2f2f2 50%,
+    #d1d1d1 100%
+  );                                   /* 左深中淺右深的漸層 */
+  border: 1px solid #aaa;             /* 淡灰邊框 */
+  border-radius: 4px;                 /* 小圓角 */
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.8),  /* 上方小高光 */
+    0 2px 4px rgba(0,0,0,0.1);         /* 外側微陰影 */
+  font-weight: bold;
+  font-size: 1.1em;
   text-align: center;
+  color: #333;
 }
