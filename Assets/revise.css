@@ -21,3 +21,25 @@ select.cf{max-width:180px;}
     display: inline-block;
     white-space: nowrap;
 } 
+#idx_header {
+  position: relative;           /* 必須保留，才能做偏移 */
+  width: 100vw !important;      /* 橫向滿版 */
+  left: 50% !important;         /* 從容器中間往左 50% */
+  transform: translateX(-50%) !important; /* 再往左補一半寬度 */
+  
+  height: 320px;                /* 視需求調整 */
+  
+  /* 換成你的圖路徑，且用 !important 確保覆寫 */
+  background-image: url('Assets/hct.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important; /* 去掉原本藍底 */
+  margin: 0; padding: 0;
+}
+
+/* 確保 Logo、選單在圖上方 */
+#idx_header * {
+  position: relative !important;
+  z-index: 1 !important;
+}
