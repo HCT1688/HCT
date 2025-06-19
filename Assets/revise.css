@@ -75,20 +75,22 @@ select.cf{max-width:180px;}
 }
 
 
-/* ==== Bottom Metal Bar ==== */
-#metal-footer{
-  height:113px;                                   /* 圖片實際高度 */
-  background:url('Assets/img/footbg.jpg') repeat-x center top;
-  border:1px solid #b4b4b4;
-  box-sizing:border-box;
+/* ==== 套用金屬條到原本的 #foot ==== */
+#foot {
+  height: 113px;                                           /* 與 footbg.jpg 高度一致 */
+  background: url('Assets/footbg.jpg') repeat-x center 0;  /* 修正路徑 → Assets/footbg.jpg */
+  border-top: 1px solid #b4b4b4;                           /* 邊框可選 */
+  box-sizing: border-box;
 }
-.metal-inner{
-  max-width:960px;       /* 若全站已滿版 → 刪掉這行 */
-  margin:0 auto;
-  height:100%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:14px;
-  color:#333;
+
+/* 如果系統 footer 內已經是一層 <div> 做置中，補上以下；否則可刪 */
+#foot > div {
+  max-width: 960px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #333;
 }
