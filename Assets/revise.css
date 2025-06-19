@@ -75,13 +75,42 @@ select.cf{max-width:180px;}
 }
 
 
-/* ==== Bottom Metal Bar ==== */
-#foot {
-  height: 113px;
-  background: url('footbg.jpg') repeat-x no-repeat top !important;
-  background-size: 100% auto !important;
-  border-top: 1px solid #b4b4b4 !important;
-  box-sizing: border-box;
-  width: 100% !important;
+/* ===== 左右側金屬框 ===== */
+body {
+  position: relative;      /* 讓 pseudo-elements 以 viewport 定位 */
+  overflow-x: hidden;      /* 避免因側邊框出現水平捲軸 */
 }
+
+/* 左右兩條固定在視窗 */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 150px;            /* 側邊框寬度，可自行調 */
+  background: url('Assets/footbg.jpg') repeat-y center center;
+  background-size: cover;  /* 縱向重複、水平拉滿 */
+  z-index: 0;              /* 在最底層，不擋內容 */
+}
+
+/* 左側 */
+body::before {
+  left: 0;
+}
+
+/* 右側 */
+body::after {
+  right: 0;
+}
+
+/* 主容器、Header、Footer 提到最前面，不被 sidebars 擋住 */
+#idx_header,
+#container,
+#Tbody,
+#foot {
+  position: relative;
+  z-index: 1;
+}
+
 
