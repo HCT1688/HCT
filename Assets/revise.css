@@ -78,17 +78,10 @@ select.cf{max-width:180px;}
 /* ==== Bottom Metal Bar ==== */
 #foot {
   height: 113px;
-  background: url('footbg.jpg') repeat-x center top !important;
-  border-top: 1px solid #b4b4b4 !important;
-  box-sizing: border-box;
-}
-
-#foot {
-  height: 113px;
-  /* 改為不重複，並把圖片橫向拉滿，縱向自適應 */
-  background: url('Assets/footbg.jpg') no-repeat center top !important;
+  background: url('footbg.jpg') repeat-x no-repeat top !important;
   background-size: 100% auto !important;
   border-top: 1px solid #b4b4b4 !important;
   box-sizing: border-box;
-  width: 100% !important;  /* 確保它不受版心 960px 限制 */
+  width: 100% !important;
 }
+
