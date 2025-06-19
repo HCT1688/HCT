@@ -114,13 +114,15 @@ body::after {
 }
 
 
-.main-wrap {
-  width: 1100px;      /* 這裡改成你的主內容想要的寬度，通常960~1200都可以 */
-  margin: 0 auto;     /* 讓它左右置中 */
-  background: none;   /* 不用底色 */
-}
-#idx_header, #container, #foot {
+#idx_header {
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  background: url('Assets/hct.png') center/contain no-repeat;
+  background-color: transparent;
+  height: 260px;
+  position: relative;
+  color: #fff;
+}
+
 }
