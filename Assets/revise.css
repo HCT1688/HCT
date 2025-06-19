@@ -106,15 +106,7 @@ body::after {
 
 /* 主容器、Header、Footer 提到最前面，不被 sidebars 擋住 */
 #idx_header,
-#container {
-  width: 100vw !important;
-  max-width: 100vw !important;
-  margin: 0 !important;
-  padding-left: 150px;   /* 須留給左邊金屬框空間 */
-  padding-right: 150px;  /* 須留給右邊金屬框空間 */
-  box-sizing: border-box;
-  background: transparent; /* 如需透明或自訂 */
-}
+#container,
 #Tbody,
 #foot {
   position: relative;
