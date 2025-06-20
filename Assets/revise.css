@@ -192,4 +192,15 @@ html {
   overflow-x: hidden;
 }
 
+/* footer 置中 */
+#foot .footer-center {
+  text-align: center;
+  padding: 20px 0;
+}
+#foot .footer-center .fb-like,
+#foot .footer-center .footer-feed {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 15px;
+}
 

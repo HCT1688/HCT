@@ -208,33 +208,42 @@ After manual positioning of the item, the robotic arm individually picks up the 
 	<!-- News 結束 -->
 </main>
 <!-- 內容 結束 -->
-    <footer id="foot">
-<div align="center">   
-div id="fb-root"></div>
-<script async defer crossorigin="anonymous"
-  src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v15.0">
-</script>
+   <!-- ↓↓↓ 下面這整段取代原本的 <footer id="foot">…</footer> ↓↓↓ -->
+<footer id="foot">
+  <!-- 把 fb-root 與 SDK script 放在這裡，只載入一次 -->
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous"
+          src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v15.0">
+  </script>
 
-<!-- 2. Like 按鈕：把 data-href 換成你想讓使用者「按讚」的那個網址 -->
-<div class="fb-like"
-     data-href="https://www.facebook.com/hct2d/"
-     data-width=""
-     data-layout="button_count"
-     data-action="like"
-     data-size="small"
-     data-share="false">
-</div>
-  <style>
-  .fb-like>span { vertical-align: baseline!important;height:20px!important; }
-  </style>  
-   <br><script type="text/javascript" src="Assets/setcounter.php"></script><img src="Assets/3.png"><img src="Assets/1.png"><img src="Assets/6.png"><img src="Assets/7.png"><img src="Assets/9.png"> 
-  <div class="footer-feed">
-         <img src="Assets/feed.png" border="0" style="vertical-align:middle;" alt="Subscribe to News"><a href="https://www.hct2d.com/hots.xml" title="Subscription notifications">Subscription notifications</a>
-        &nbsp;&nbsp;<small><a href="https://hosting.url.com.tw/" target="_blank">Powered by hosting.url.com.tw</a></small>
-    <a href="javascript:void(0);" title="Desktop">Desktop</a> | <a href="https://www.hct2d.com/yellowpageMobile" title="Mobile">Mobile</a> 
-   </div>
-  </div> 
-  </footer>
+  <!-- footer 內容置中容器 -->
+  <div class="footer-center">
+    <!-- Facebook Like 按鈕 -->
+    <div class="fb-like"
+         data-href="https://www.facebook.com/hct2d/"
+         data-layout="button_count"
+         data-action="like"
+         data-size="small"
+         data-share="false">
+    </div>
+
+    <!-- 計數器與 Subscription -->
+    <br>
+    <script type="text/javascript" src="Assets/setcounter.php"></script>
+    <img src="Assets/3.png" alt=""><img src="Assets/1.png" alt="">
+    <img src="Assets/6.png" alt=""><img src="Assets/7.png" alt="">
+    <img src="Assets/9.png" alt="">
+
+    <div class="footer-feed">
+      <img src="Assets/feed.png" style="vertical-align:middle;" alt="Subscribe to News">
+      <a href="https://www.hct2d.com/hots.xml" title="Subscription notifications">Subscription notifications</a>
+      &nbsp;&nbsp;<small><a href="https://hosting.url.com.tw/" target="_blank">Powered by hosting.url.com.tw</a></small>
+      &nbsp;|&nbsp;<a href="javascript:void(0);" title="Desktop">Desktop</a>
+      &nbsp;|&nbsp;<a href="https://www.hct2d.com/yellowpageMobile" title="Mobile">Mobile</a>
+    </div>
+  </div>
+</footer>
+
 </div>
 </div>
 <script type="text/javascript" src="Assets/tracer.php"></script>
