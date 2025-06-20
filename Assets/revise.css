@@ -163,8 +163,8 @@ body::after {
 /* ===== 1. 調整 CH 與聯絡資訊位置 & 顏色 ===== */
 #idx_logo {
   position: absolute !important;
-  top: 60px   !important;  /* 原本 20px → 調大到 60px */
-  left: 50px  !important;  /* 原本 30px → 調大到 50px */
+  top: 0px   !important;  
+  left: 50px  !important;  /
   z-index: 10 !important;
 }
 #idx_logo .alogo,
@@ -175,8 +175,8 @@ body::after {
 /* ===== 2. 調整選單位置 & 顏色 ===== */
 #idx_menu {
   position: absolute     !important;
-  top: 70px    !important;  /* 原本 28px → 調大到 70px */
-  right: 50px  !important;  /* 原本 30px → 調大到 50px */
+  top: 10px    !important;  
+  right: 50px  !important;  
   z-index: 10            !important;
   display: inline-flex;
   gap: 20px;
