@@ -208,27 +208,32 @@ After manual positioning of the item, the robotic arm individually picks up the 
 	<!-- News 結束 -->
 </main>
 <!-- 內容 結束 -->
-   <!-- ↓↓↓ 下面這整段取代原本的 <footer id="foot">…</footer> ↓↓↓ -->
-<footer id="foot">
-  <!-- 把 fb-root 與 SDK script 放在這裡，只載入一次 -->
+ <footer id="foot">
   <div id="fb-root"></div>
   <script async defer crossorigin="anonymous"
           src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v15.0">
   </script>
 
-  <!-- footer 內容置中容器 -->
   <div class="footer-center">
-    <!-- Facebook Like 按鈕 -->
-     <a href="https://www.facebook.com/hct2d/" target="_blank" rel="noopener">
-    <div class="fb-like"
-         data-href="https://www.facebook.com/hct2d/"
-         data-layout="button_count"
-         data-action="like"
-         data-size="small"
-         data-share="false">
+    <!-- 先建一個相對定位的容器 -->
+    <div class="fb-like-wrapper" style="position:relative; display:inline-block;">
+      <!-- Facebook Like 按鈕（iframe 會被掛在這裡） -->
+      <div class="fb-like"
+           data-href="https://www.facebook.com/hct2d/"
+           data-layout="button_count"
+           data-action="like"
+           data-size="small"
+           data-share="false">
+      </div>
+      <!-- 再放一個絕對定位的透明連結，覆蓋在上面 -->
+      <a href="https://www.facebook.com/hct2d/" target="_blank" rel="noopener"
+         style="
+           position:absolute;
+           top:0; left:0; right:0; bottom:0;
+           z-index:10;
+           text-indent:-9999px;
+         ">前往粉專</a>
     </div>
-  </a>
-
 
     <!-- 計數器與 Subscription -->
     <br>
