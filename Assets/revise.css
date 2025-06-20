@@ -184,3 +184,18 @@ body::after {
 #idx_menu a.menuA {
   color: #000 !important;  /* 白 → 黑 */
 }
+/* ===== 讓最底部整塊都是金屬質感背景 ===== */
+body, #container, #Tbody, #foot {
+  background: url('Assets/footbg.jpg') repeat-y center center !important;
+  background-size: cover !important;
+  /* 這行確保原本底色不會蓋過背景圖 */
+  background-color: transparent !important;
+  box-shadow: none !important;   /* 萬一有底部陰影也清掉 */
+  border: none !important;       /* 萬一有邊框也清掉 */
+}
+
+/* 這行清掉瀏覽器預設留白 */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
