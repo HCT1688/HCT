@@ -195,3 +195,12 @@ html, body {
 body {
   background-color: #92afc0 !important;  /* 换成你内容区真正的灰蓝色 */
 }
+
+/* —— 3. 把中間那整塊（含 footer）改成金屬紋理 —— */
+#container,
+#Tbody,
+#foot {
+  /* 換成你的金屬背景圖片路徑，並重複鋪滿 */
+  background: url('Assets/footbg.jpg') repeat-y center center !important;
+  background-size: cover       !important;
+}
