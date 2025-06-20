@@ -210,10 +210,20 @@ After manual positioning of the item, the robotic arm individually picks up the 
 <!-- 內容 結束 -->
     <footer id="foot">
 <div align="center">   
-<div class="fb-like fb_iframe_widget" data-href="https://www.facebook.com/hct2d/" data-send="false" data-layout="button_count" data-width="50" data-show-faces="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;container_width=960&amp;href=http%3A%2F%2Fwww.hct2d.com%2Findex.html&amp;layout=button_count&amp;locale=zh_TW&amp;sdk=joey&amp;send=false&amp;show_faces=true&amp;width=50"><span style="vertical-align: bottom; width: 90px; height: 28px;"><iframe name="f95ac6495542d2e2a" width="50px" height="1000px" data-testid="fb:like Facebook Social Plugin" title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="Assets/like.html" style="border: none; visibility: visible; width: 90px; height: 28px;" class="">
-</iframe>
-</span>
-	</div>
+div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v15.0">
+</script>
+
+<!-- 2. Like 按鈕：把 data-href 換成你想讓使用者「按讚」的那個網址 -->
+<div class="fb-like"
+     data-href="https://www.facebook.com/hct2d/"
+     data-width=""
+     data-layout="button_count"
+     data-action="like"
+     data-size="small"
+     data-share="false">
+</div>
   <style>
   .fb-like>span { vertical-align: baseline!important;height:20px!important; }
   </style>  
