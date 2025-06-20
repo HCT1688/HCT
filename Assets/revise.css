@@ -94,7 +94,7 @@ body::after {
   height: 260px      !important;  /* 固定高度，和你原來想要的一致 */
   position: relative !important;
   overflow: hidden  !important;   /* 把超出高度的圖片裁掉 */
-}ㄅ
+}
 
 
 
