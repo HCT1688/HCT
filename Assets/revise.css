@@ -185,5 +185,11 @@ body::after {
   color: #000 !important;  /* 白 → 黑 */
 }
 
+/* 放在最外層 CSS 檔最下方 */
+html {
+  zoom: 110%;
+  /* 如果出現水平捲軸，就加下面這行 */
+  overflow-x: hidden;
+}
 
 
