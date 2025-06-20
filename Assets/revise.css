@@ -90,15 +90,11 @@ body::after {
 
 
 #idx_header {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
-  background: url('Assets/hct.png') center/contain no-repeat;
-  background-color: transparent;
-  height: 260px;
-  position: relative;
-  color: #fff;
-}
+  background: none !important;
+  height: 260px      !important;  /* 固定高度，和你原來想要的一致 */
+  position: relative !important;
+  overflow: hidden  !important;   /* 把超出高度的圖片裁掉 */
+}ㄅ
 
 
 
