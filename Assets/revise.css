@@ -126,15 +126,16 @@ body::after {
 }
 
 
-/* ===== 1. 移除 header 本身的背景干擾 ===== */
+/* ========== 全新 Header 排版 ========== */
+/* 1. 先清掉 header 原本的背景、高度設定 */
 #idx_header {
   background: none !important;
-  height: auto !important;
+  height: auto    !important;
   position: relative !important;
   overflow: hidden !important;
 }
 
-/* ===== 2. 背景圖用 <img class="header-bg"> 撐滿 ===== */
+/* 2. 讓 <img class="header-bg"> 撐滿整列 */
 #idx_header > img.header-bg {
   display: block;
   width: 100%;
@@ -144,39 +145,43 @@ body::after {
   z-index: 0;
 }
 
-/* ===== 3. 絕對定位 #idx_logo ===== */
+/* 3. 絕對定位 LOGO 到左上 */
 #idx_logo {
   position: absolute !important;
-  top: 20px;      /* 距離 header 頂端 20px，可自己微調 */
-  left: 30px;     /* 距離左側 30px */
-  z-index: 5 !important;
-  pointer-events: auto; /* 裡面連結依然可點 */
-}
-/* 如果想修改 LOGO 文字大小顏色也可以加： */
-#idx_logo .alogo { font-size: 24px; color: #fff; }
-#idx_logo #blogTitle { font-size: 14px; color: #fff; }
-
-/* ===== 4. 絕對定位 #idx_menu ===== */
-#idx_menu {
-  position: absolute !important;
-  top: 28px;      /* 跟 logo 同高度線，可自行微調 */
-  right: 30px;    /* 距離右側 30px */
-  z-index: 5 !important;
+  top: 20px;    
+  left: 30px;   
+  z-index: 10  !important;
   pointer-events: auto;
 }
-/* 清掉預設清單樣式，水平排列 */
+#idx_logo .alogo {
+  font-size: 24px;
+  color: #fff;
+}
+#idx_logo #blogTitle {
+  font-size: 14px;
+  color: #fff;
+  margin-top: 4px;
+}
+
+/* 4. 絕對定位選單到右上，用 inline-flex 快速水平排列 */
+#idx_menu {
+  position: absolute     !important;
+  top: 28px;              /* 跟 LOGO 同一水平線 */
+  right: 30px;            
+  z-index: 10            !important;
+  display: inline-flex;   /* 直接在這裡排平行 */
+  gap: 20px;              /* 各項目間距 */
+  pointer-events: auto;
+}
 #idx_menu li {
   list-style: none;
-  display: inline-block;
-  margin-left: 20px;
 }
 #idx_menu a.menuA {
-  color: #000 !important;
+  color: #fff       !important;
+  font-size: 16px;
   font-weight: bold;
   text-decoration: none;
-  font-size: 16px;
 }
 #idx_menu a.menuA:hover {
   text-decoration: underline;
 }
-
