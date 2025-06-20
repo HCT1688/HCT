@@ -194,7 +194,7 @@ html, body {
   min-height: 100vh !important;
   margin: 0 !important;
   padding: 0 !important;
-  background: url('Assets/footbg.jpg') repeat !important;
+  background: url('footbg.jpg') repeat !important;
   background-size: cover !important;
 }
 
