@@ -185,3 +185,33 @@ body::after {
   color: #000 !important;  /* 白 → 黑 */
 }
 
+
+
+
+/* 徹底清掉 footer 的白底與留白 */
+#foot, #foot > div, #foot .footer-feed {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 讓 footer 用金屬質感背景鋪滿 */
+#foot {
+  background: url('footbg.jpg') repeat-x center bottom !important;
+  background-size: cover !important;
+}
+
+/* 若你的 .footer-feed 是最後那條長白邊，加這條直接金屬化它 */
+#foot .footer-feed {
+  background: url('footbg.jpg') repeat-x center bottom !important;
+  background-size: cover !important;
+}
+
+/* 若有「白底還沒消失」— 很可能是全域有 min-height/height/padding，直接砍掉 */
+#foot, #foot > div, #foot .footer-feed {
+  min-height: 0 !important;
+  height: auto !important;
+}
