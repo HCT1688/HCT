@@ -163,8 +163,8 @@ body::after {
 /* ===== 1. 調整 CH 與聯絡資訊位置 & 顏色 ===== */
 #idx_logo {
   position: absolute !important;
-  top: 0px   !important;  
-  left: 50px  !important;  /
+  top: -10px   !important;  
+  left: 10px  !important;  /
   z-index: 10 !important;
 }
 #idx_logo .alogo,
