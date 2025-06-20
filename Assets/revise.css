@@ -132,6 +132,7 @@ body::after {
     position: relative;
     width: 100%;
     overflow: hidden;
+    height: auto;
   }
 
   /* 背景圖撐滿寬度，不裁切 */
@@ -143,16 +144,17 @@ body::after {
 
   /* 疊加層：放文字、LOGO、選單 */
   .header-overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    pointer-events: none; /* 圖片下方的連結才可點 */
-  }
+  position: absolute;
+  top: 20px;            /* 往下留 20px，再往上跑就看得到背景圖囉 */
+  left: 0;
+  right: 0;
+  padding: 0 20px;      /* 左右留點間距 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  /* 垂直置中 */
+  pointer-events: none; /* 圖下的連結才可點 */
+  z-index: 1;           /* 確保疊在 img 之上 */
+}
 
   /* 左側區塊 */
   .header-left {
