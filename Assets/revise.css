@@ -21,36 +21,11 @@ select.cf{max-width:180px;}
     display: inline-block;
     white-space: nowrap;
 } 
-/* —— 1. 讓 header 透明，並做為 relative 容器 —— */
-#idx_header {
-  background-color: transparent !important;
-  position: relative !important;
-}
 
-/* —— 2. 把 Hero 圖絕對定位到 header 最頂 —— */
-#idx_header .hero {
-  position: absolute !important;
-  top: 0; left: 0;
-  width: 100%; 
-  height: 100%;   /* 如需更精確，可用固定高度 px 或 vh */
-  overflow: hidden;
-  z-index: 0;     /* 放在最底層 */
-}
 
-/* —— 3. 讓圖片鋪滿 .hero —— */
-#idx_header .hero-bg {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-}
 
-/* —— 4. Logo 與選單浮在 banner 之上 —— */
-#idx_header #idx_logo,
-#idx_header #idx_menu,
-#idx_header #idx_logo * {
-  position: relative !important;
-  z-index: 1 !important;
-}
+
+
 /* —— 金屬質感橫條標題 —— */
 .idx_intro .Ptitle {
   display: block;                      /* 佔滿整行 */
@@ -126,24 +101,6 @@ body::after {
 }
 
 
-/* ========== 全新 Header 排版 ========== */
-/* 1. 先清掉 header 原本的背景、高度設定 */
-#idx_header {
-  background: none !important;
-  height: auto    !important;
-  position: relative !important;
-  overflow: hidden !important;
-}
-
-/* 2. 讓 <img class="header-bg"> 撐滿整列 */
-#idx_header > img.header-bg {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  position: relative;
-  z-index: 0;
-}
 
 /* 3. 絕對定位 LOGO 到左上 */
 #idx_logo {
