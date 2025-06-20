@@ -164,7 +164,7 @@ body::after {
 #idx_logo {
   position: absolute !important;
   top: -30px   !important;  
-  left: 0px  !important;  /
+  left: 0px  !important;  
   z-index: 10 !important;
 }
 #idx_logo .alogo,
