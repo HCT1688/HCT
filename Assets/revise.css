@@ -126,58 +126,52 @@ body::after {
 }
 
 
-/* 1. 讓 header 高度跟著圖片走，移除任何固定 height */
+/* ===== 1. 移除 header 本身的背景干擾 ===== */
 #idx_header {
-  position: relative;
-  width: 100%;
+  background: none !important;
   height: auto !important;
-  overflow: hidden;
+  position: relative !important;
+  overflow: hidden !important;
 }
 
-/* 2. 背景圖撐滿寬度 */
-.header-bg {
+/* ===== 2. 背景圖用 <img class="header-bg"> 撐滿 ===== */
+#idx_header > img.header-bg {
   display: block;
   width: 100%;
   height: auto;
+  object-fit: cover;
+  position: relative;
+  z-index: 0;
 }
 
-/* 3. 把 #idx_logo 絕對定位到左上角 */
+/* ===== 3. 絕對定位 #idx_logo ===== */
 #idx_logo {
-  position: absolute;
-  top: 20px;    /* 距離上緣 20px，你可以自己調整 */
-  left: 20px;   /* 距離左邊 20px */
-  z-index: 10;
-  pointer-events: auto;  /* 讓裡面連結可以點 */
+  position: absolute !important;
+  top: 20px;      /* 距離 header 頂端 20px，可自己微調 */
+  left: 30px;     /* 距離左側 30px */
+  z-index: 5 !important;
+  pointer-events: auto; /* 裡面連結依然可點 */
 }
-/* 美化一下文字 */
-#idx_logo .alogo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #fff;
-  text-decoration: none;
-}
-#idx_logo #blogTitle {
-  font-size: 14px;
-  color: #fff;
-  margin-top: 4px;
-}
+/* 如果想修改 LOGO 文字大小顏色也可以加： */
+#idx_logo .alogo { font-size: 24px; color: #fff; }
+#idx_logo #blogTitle { font-size: 14px; color: #fff; }
 
-/* 4. 把 #idx_menu 絕對定位到右上角 */
+/* ===== 4. 絕對定位 #idx_menu ===== */
 #idx_menu {
-  position: absolute;
-  top: 30px;     /* 跟 logo 同列或微調 */
-  right: 20px;
-  z-index: 10;
-  display: flex;
-  gap: 20px;     /* 選單項目間距 */
+  position: absolute !important;
+  top: 28px;      /* 跟 logo 同高度線，可自行微調 */
+  right: 30px;    /* 距離右側 30px */
+  z-index: 5 !important;
   pointer-events: auto;
 }
+/* 清掉預設清單樣式，水平排列 */
 #idx_menu li {
   list-style: none;
-  margin: 0;
+  display: inline-block;
+  margin-left: 20px;
 }
 #idx_menu a.menuA {
-  color: #000;
+  color: #000 !important;
   font-weight: bold;
   text-decoration: none;
   font-size: 16px;
@@ -185,3 +179,4 @@ body::after {
 #idx_menu a.menuA:hover {
   text-decoration: underline;
 }
+
