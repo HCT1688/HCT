@@ -126,92 +126,62 @@ body::after {
 }
 
 
-<style>
-  /* Header 容器 */
-  #idx_header {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    height: auto;
-  }
-
-  /* 背景圖撐滿寬度，不裁切 */
-  .header-bg {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  /* 疊加層：放文字、LOGO、選單 */
-  .header-overlay {
-  position: absolute;
-  top: 20px;            /* 往下留 20px，再往上跑就看得到背景圖囉 */
-  left: 0;
-  right: 0;
-  padding: 0 20px;      /* 左右留點間距 */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;  /* 垂直置中 */
-  pointer-events: none; /* 圖下的連結才可點 */
-  z-index: 1;           /* 確保疊在 img 之上 */
+/* 1. 讓 header 高度跟著圖片走，移除任何固定 height */
+#idx_header {
+  position: relative;
+  width: 100%;
+  height: auto !important;
+  overflow: hidden;
 }
 
-  /* 左側區塊 */
-  .header-left {
-    pointer-events: auto;
-    color: #fff;
-  }
-  .logo .alogo {
-    display: inline-block;
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-  }
-  .contact-info {
-    font-size: 14px;
-    margin-top: 4px;
-  }
-  .company-name {
-    font-size: 36px;
-    font-weight: bold;
-    line-height: 1.2;
-    margin-top: 8px;
-  }
-  .zh-red {
-    color: red;
-    font-size: 32px;
-  }
+/* 2. 背景圖撐滿寬度 */
+.header-bg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
-  /* 右側區塊 */
-  .header-right {
-    pointer-events: auto;
-    text-align: right;
-    color: #000;
-  }
-  .call-us p {
-    margin: 0;
-    font-size: 16px;
-    color: #ffa351;
-    font-weight: bold;
-    line-height: 1.4;
-  }
-  .top-nav ul {
-    list-style: none;
-    margin: 8px 0 0;
-    padding: 0;
-    display: inline-flex;
-  }
-  .top-nav li {
-    margin-left: 20px;
-  }
-  .top-nav a {
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    color: #000;
-  }
-  .top-nav a:hover {
-    text-decoration: underline;
-  }
-</style>
+/* 3. 把 #idx_logo 絕對定位到左上角 */
+#idx_logo {
+  position: absolute;
+  top: 20px;    /* 距離上緣 20px，你可以自己調整 */
+  left: 20px;   /* 距離左邊 20px */
+  z-index: 10;
+  pointer-events: auto;  /* 讓裡面連結可以點 */
+}
+/* 美化一下文字 */
+#idx_logo .alogo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+#idx_logo #blogTitle {
+  font-size: 14px;
+  color: #fff;
+  margin-top: 4px;
+}
+
+/* 4. 把 #idx_menu 絕對定位到右上角 */
+#idx_menu {
+  position: absolute;
+  top: 30px;     /* 跟 logo 同列或微調 */
+  right: 20px;
+  z-index: 10;
+  display: flex;
+  gap: 20px;     /* 選單項目間距 */
+  pointer-events: auto;
+}
+#idx_menu li {
+  list-style: none;
+  margin: 0;
+}
+#idx_menu a.menuA {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+}
+#idx_menu a.menuA:hover {
+  text-decoration: underline;
+}
