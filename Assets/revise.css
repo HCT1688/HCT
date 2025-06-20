@@ -184,3 +184,14 @@ body::after {
 #idx_menu a.menuA {
   color: #000 !important;  /* 白 → 黑 */
 }
+
+/* 1. 關掉 html/body 的預設 margin/padding，避免露出白邊 */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. 把 body 的背景色改成跟內容區一樣的顏色 */
+body {
+  background-color: #92afc0; /* ← 改成你內容區真正在用的那顏色 */
+}
