@@ -184,23 +184,3 @@ body::after {
 #idx_menu a.menuA {
   color: #000 !important;  /* 白 → 黑 */
 }
-
-/* 1. 彻底清除默认留白 */
-html, body {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* 2. 把中间那块灰蓝色扩展到整页 */
-body {
-  background-color: #92afc0 !important;  /* 换成你内容区真正的灰蓝色 */
-}
-
-/* —— 3. 把中間那整塊（含 footer）改成金屬紋理 —— */
-#container,
-#Tbody,
-#foot {
-  /* 換成你的金屬背景圖片路徑，並重複鋪滿 */
-  background: url('Assets/footbg.jpg') repeat-y center center !important;
-  background-size: cover       !important;
-}
