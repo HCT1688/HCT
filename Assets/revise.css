@@ -185,13 +185,13 @@ body::after {
   color: #000 !important;  /* 白 → 黑 */
 }
 
-/* 1. 關掉 html/body 的預設 margin/padding，避免露出白邊 */
+/* 1. 彻底清除默认留白 */
 html, body {
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-/* 2. 把 body 的背景色改成跟內容區一樣的顏色 */
+/* 2. 把中间那块灰蓝色扩展到整页 */
 body {
-  background-color: #92afc0; /* ← 改成你內容區真正在用的那顏色 */
+  background-color: #92afc0 !important;  /* 换成你内容区真正的灰蓝色 */
 }
