@@ -159,3 +159,28 @@ body::after {
 #idx_menu a.menuA:hover {
   text-decoration: underline;
 }
+
+/* ===== 1. 調整 CH 與聯絡資訊位置 & 顏色 ===== */
+#idx_logo {
+  position: absolute !important;
+  top: 60px   !important;  /* 原本 20px → 調大到 60px */
+  left: 50px  !important;  /* 原本 30px → 調大到 50px */
+  z-index: 10 !important;
+}
+#idx_logo .alogo,
+#idx_logo #blogTitle {
+  color: #000 !important;  /* 白 → 黑 */
+}
+
+/* ===== 2. 調整選單位置 & 顏色 ===== */
+#idx_menu {
+  position: absolute     !important;
+  top: 70px    !important;  /* 原本 28px → 調大到 70px */
+  right: 50px  !important;  /* 原本 30px → 調大到 50px */
+  z-index: 10            !important;
+  display: inline-flex;
+  gap: 20px;
+}
+#idx_menu a.menuA {
+  color: #000 !important;  /* 白 → 黑 */
+}
