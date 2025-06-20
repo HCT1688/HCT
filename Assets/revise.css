@@ -207,3 +207,23 @@ html, body {
   box-shadow: none !important;
   border: none !important;
 }
+/* 把內容主區塊的白底、框線、陰影都徹底去掉 */
+#idx_content,
+.idx_intro,
+#Tbody,
+#container,
+footer,
+#foot,
+#container > div,
+#container > main,
+body > #container,
+body > #container > #Tbody,
+body > #container > #Tbody > #idx_content,
+body > #container > #Tbody > #idx_content > .idx_intro
+{
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
