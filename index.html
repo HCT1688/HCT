@@ -46,33 +46,33 @@
       .main-wrap { max-width: 100%; }
     }
     /* Facebook 追蹤我們按鈕 */
-.fb-direct-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  text-decoration: none;
-  font-size: 14px;
-  color: #1877F2;
-  vertical-align: middle;
-}
-.fb-direct-link img {
-  width: 20px;
-  height: 20px;
-  display: block;
-}
-.fb-direct-link span {
-  font-weight: 500;
-}
-
+    .fb-direct-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      text-decoration: none;
+      font-size: 14px;
+      color: #1877F2;
+      vertical-align: middle;
+    }
+    .fb-direct-link img {
+      width: 20px;
+      height: 20px;
+      display: block;
+    }
+    .fb-direct-link span {
+      font-weight: 500;
+    }
   </style>
 </head>
 <body>
   <!-- Schema.org 基本資料 -->
   <div itemscope itemtype="https://schema.org/WebSite">
     <meta itemprop="url" content="https://www.hct2d.com/index.html">
-    <meta itemprop="name" content="HongCh Technology Co., Ltd.">
+    <meta itemprop="name" content="HongCh Technology Co., Ltd.">
     <meta itemprop="alternateName" content="HCT 弘馳科技有限公司">
   </div>
+
   <div id="container">
     <!-- 表頭 -->
     <header id="idx_header">
@@ -88,9 +88,8 @@
       </nav>
     </header>
 
-    <!-- ★ 新增: Marquee 跑馬燈 + 影片聯絡區塊，包在 main-wrap 內 -->
+    <!-- 跑馬燈 + 影片聯絡區 -->
     <div class="main-wrap">
-      <!-- Marquee (英文跑馬燈) -->
       <div class="marquee">
         <marquee scrollamount="5">
           <a href="https://www.youtube.com/watch?v=aTX2pvaFO3w"
@@ -99,8 +98,6 @@
           </a>
         </marquee>
       </div>
-
-      <!-- EN video row with contact -->
       <div class="video-row">
         <div class="side-text">
           <strong>Contact us</strong><br>
@@ -109,12 +106,10 @@
         </div>
         <div class="home-video">
           <iframe
-            width="480" height="270"
+            loading="lazy"
             src="https://www.youtube.com/embed/aTX2pvaFO3w"
-            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy">
+            allowfullscreen>
           </iframe>
         </div>
         <div class="side-text">
@@ -126,7 +121,7 @@
 
     <!-- 主內容 -->
     <main id="idx_content">
-      <!-- 關於我們 -->
+      <!-- About us -->
       <div class="idx_intro">
         <h4 class="Ptitle">About us</h4>
         <div style="height:202px;overflow:hidden;">
@@ -147,7 +142,8 @@
           »<a class="more" href="https://www.hct2d.com/info.html">More</a>
         </span>
       </div>
-      <!-- 最新商品 -->
+
+      <!-- Product Introduction -->
       <div class="idx_intro">
         <h4 class="Ptitle">Product Introduction</h4>
         <div class="proditem">
@@ -156,7 +152,11 @@
               <img src="Assets/product_1665815.png" alt="">
             </a>
           </div>
-          <p><a class="titleC" href="https://www.hct2d.com/product_cg421655.html"><b>Electronic Shelf Label</b></a></p>
+          <p>
+            <a class="titleC" href="https://www.hct2d.com/product_cg421655.html">
+              <b>Electronic Shelf Label</b>
+            </a>
+          </p>
         </div>
         <div class="proditem">
           <div class="imgdiv">
@@ -164,28 +164,34 @@
               <img src="Assets/product_1596058.png" alt="">
             </a>
           </div>
-          <p><a class="titleC" href="https://www.hct2d.com/product_cg369816.html"><b>HCT-7F80</b></a></p>
+          <p>
+            <a class="titleC" href="https://www.hct2d.com/product_cg369816.html">
+              <b>HCT-7F80</b>
+            </a>
+          </p>
           <p>Price NT$ 19800</p>
         </div>
         <span class="more">
           »<a class="more" href="https://www.hct2d.com/product.html">More</a>
         </span>
       </div>
+
       <!-- News -->
-      <div class="idx_intro"></div>
+      <div class="idx_intro">
         <h4 class="Ptitle">News</h4>
-        <a class="news"href="https://www.hct2d.com/hot_517824.html" title="Expanded Services: RFID e-Rack & AMR System Integration">
+        <a class="news" href="https://www.hct2d.com/hot_517824.html" title="Expanded Services: RFID e-Rack & AMR System Integration">
           <b class="short_title">Expanded Services: RFID e-Rack & AMR System Integration</b>
           <span>2025-06-26</span>
+        </a>
         <a class="news" href="https://www.hct2d.com/hot_477018.html" title="Expanded Services: Warehousing, Sorting & Packaging, Other Logistics Support">
           <b class="short_title">Expanded Services: Warehousing, Sorting & Packaging, Other Logistics Support</b>
           <span>2023-11-15</span>
         </a>
-        <a class="news" href="https://www.hct2d.com/hot_471561.html" title="RFID Application / Product Architecture / Product Features / Product Advantages / Gallery">
+        <a class="news" href="https://www.hct2d.com/hot_471561.html" title="RFID Applications / Product Architecture / Key Features / Advantages / Gallery">
           <b class="short_title">RFID Applications / Product Architecture / Key Features / Advantages / Gallery</b>
           <span>2023-09-20</span>
         </a>
-        <a class="news" href="https://www.hct2d.com/hot_466285.html" title="[Top Seller] HCT-2D-005 – 2D Handheld Barcode Scanner">
+        <a class="news" href="https://www.hct2d.com/hot_466285.html" title="[Best-Seller] HCT 2D-005 Handheld Barcode Scanner">
           <b class="short_title">[Best-Seller] HCT 2D-005 Handheld Barcode Scanner</b>
           <span>2023-07-14</span>
         </a>
@@ -203,19 +209,17 @@
           <a href="https://www.hct2d.com/hots.xml" title="Subscription notifications">Subscription notifications</a>
           &nbsp;&nbsp;<small><a href="https://hosting.url.com.tw/" target="_blank">Powered by hosting.url.com.tw</a></small>
           &nbsp;|&nbsp;<a href="javascript:void(0);" title="Desktop">Desktop</a>
-          &n/a>
         </div>
-        <!-- Facebook 追蹤我們按鈕 -->
-<div class="footer-center" style="margin-top:8px;">
-  <a class="fb-direct-link"
-     href="https://www.facebook.com/hct2d/"
-     target="_blank"
-     title="Follow HCT on Facebook">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-         alt="Facebook">
-    <span>Follow us</span>
-  </a>
-</div>
+        <div style="margin-top:8px;">
+          <a class="fb-direct-link"
+             href="https://www.facebook.com/hct2d/"
+             target="_blank"
+             title="Follow HCT on Facebook">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                 alt="Facebook">
+            <span>Follow us</span>
+          </a>
+        </div>
       </div>
     </footer>
   </div>
